@@ -1,0 +1,28 @@
+测试java连接调用opc服务器
+注释的代码是采集程序的基本逻辑
+* 详细的参见： collectioner 中的CollectTrendDBTask类
+运行main： package opctest;
+启动的时候需要自己本机安装opcserver才行 ，本机和现场用的是 AIMAT OPC ，参考：F:\恒泰实达\新能源：现场采集
+要想运行成功首先启动 服务中的： AIM AT OPC Server,然后运行本例就成功了
+
+测试成功 ：jdk要用32位的 本机安装的是：　D:\work\jdk_x86\jdk1.7.0_79 ；因为JCustomOpc.dll只有32位的
+注：现场运行jar包的时候，是可以在命令中直接指定32位的jre 如 set JAVA_HOME=D:\work\Java\jre7
+ 
+注意：从collector的采集保存程序中，拷贝出javafish的代码
+把JCustomOpc.properties放于 javafish.clients.opc 下
+把5个 .properties放到javafish.clients.opc.lang下
+把JCustomOpc.dll放于lib下 ，这个是32位的，目前没有64位，想运行，jdk也得用32位
+
+java调用opc代码的逻辑已比较清楚了
+报错的是因为 lib/JCustomOpc.dll是32位的，本机是64位
+
+Exception in thread "main" java.lang.UnsatisfiedLinkError: D:\work\eclipse\workspace-jee\tech30Opc\lib\JCustomOpc.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary1(ClassLoader.java:1965)
+	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1890)
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1880)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:849)
+	at java.lang.System.loadLibrary(System.java:1088)
+	at javafish.clients.opc.JCustomOpc.<clinit>(JCustomOpc.java:71)
+	at opctest.OpcConnect.connect(OpcConnect.java:21)
+	at opctest.OpcConnect.main(OpcConnect.java:13)
