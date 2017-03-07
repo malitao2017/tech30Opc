@@ -1,14 +1,18 @@
+
+首先生成jar包：ant的build运行 opc-build.xml
+jar运行： outbin\run.bat 双击
+运行main： package opctest.OpcConnect 是测试程序
+
 测试java连接调用opc服务器
 注释的代码是采集程序的基本逻辑
-* 详细的参见： collectioner 中的CollectTrendDBTask类
-运行main： package opctest;
+详细的参见： collectioner 中的CollectTrendDBTask类 javafish.clients.opc 是opc的反编译的不需要管 
 启动的时候需要自己本机安装opcserver才行 ，本机和现场用的是 AIMAT OPC ，参考：F:\恒泰实达\新能源：现场采集
 要想运行成功首先启动 服务中的： AIM AT OPC Server,然后运行本例就成功了
 
 测试成功 ：jdk要用32位的 本机安装的是：　D:\work\jdk_x86\jdk1.7.0_79 ；因为JCustomOpc.dll只有32位的
 注：现场运行jar包的时候，是可以在命令中直接指定32位的jre 如 set JAVA_HOME=D:\work\Java\jre7
- 
-注意：从collector的采集保存程序中，拷贝出javafish的代码
+
+前期配置：从collector的采集保存程序中，拷贝出javafish的代码
 把JCustomOpc.properties放于 javafish.clients.opc 下
 把5个 .properties放到javafish.clients.opc.lang下
 把JCustomOpc.dll放于lib下 ，这个是32位的，目前没有64位，想运行，jdk也得用32位

@@ -1,0 +1,13 @@
+
+bat运行jar包：
+ 方式1：可使用
+http://lihengzkj.iteye.com/blog/1183809
+
+other文件夹： 学习和理解使用命令的方式
+ 方式2：http://raindrop.iteye.com/blog/423436
+方式3： http://langgufu.iteye.com/blog/2101456
+方式4：现场
+
+
+
+

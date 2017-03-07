@@ -3,11 +3,27 @@ package opctest;
 import javafish.clients.opc.JOpc;
 import javafish.clients.opc.exception.CoInitializeException;
 
+
+
+
+/**
+ * 测试opc的连接情况
+ * 打包： ant方式带lib ,太爽了
+ * 运行1：eclipse中邮件运行
+ * 运行2：cmd运行jar包：   java -jar OpcConnect.jar
+ * 
+参考：bat运行jar包：
+http://raindrop.iteye.com/blog/423436
+http://lihengzkj.iteye.com/blog/1183809
+
+ * @author malitao
+ *
+ */
 public class OpcConnect {
 	// opcServer 地址
+	private static String ipAddress = "127.0.0.1";//自己本机系统
 //	private static String ipAddress = "192.168.0.10";//现场的内网
 //	private static String ipAddress = "172.16.14.99";//北京公司的局域网的opc放到d盘
-	private static String ipAddress = "127.0.0.1";//自己本机系统
 	// opcServer 名称
 	private static String opcName = "AIM.OPC.1";
 	// 客户端名称
@@ -15,16 +31,13 @@ public class OpcConnect {
 //	private String	hostName	= "HWS001";	// 主机名称 
 	private static JOpc jopc = null;
 	public static void main(String[] args) {
-		connect();
-	}
-	
-	/**
-	 * 不用关注具体细节，此为一直使用的连接程序
-	 * 注释的代码是采集程序的基本逻辑
-	 * 详细的参见： collectioner 中的CollectTrendDBTask类
-	 * 
-	 */
-	public static void connect(){
+		System.out.println("输出连接信息！");
+		/**
+		 * 不用关注具体细节，此为一直使用的连接程序
+		 * 注释的代码是采集程序的基本逻辑
+		 * 详细的参见： collectioner 中的CollectTrendDBTask类
+		 * 
+		 */
 		try {
 			JOpc.coInitialize();
 		} catch (CoInitializeException e1) {
