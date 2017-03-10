@@ -1,6 +1,18 @@
+最终成功了，若是不行就是要改 ip地址和本地32位jdk
+
+原来一直提示找不到 ./lib/JCustomOpc.dll
+原因： 使用的是跟out平级的lib下的dll
 
 首先生成jar包：ant的build运行 opc-build.xml
 jar运行： outbin\run.bat 双击
+一个可运行的现场测试项目:把变量ipAddress改为现场地址；run.bat中的JAVA_HOME定义为现场的jdk或jre
+<!-- 工程目录结构  
+    liverun  
+        |-lib  
+        |-out  
+        |-outbin  
+    -->  
+
 运行main： package opctest.OpcConnect 是测试程序
 
 测试java连接调用opc服务器
