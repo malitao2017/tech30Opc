@@ -1,3 +1,6 @@
+github地址：
+https://github.com/malitao2017/tech30Opc
+
 最终成功了，若是不行就是要改 ip地址和本地32位jdk
 
 原来一直提示找不到 ./lib/JCustomOpc.dll
