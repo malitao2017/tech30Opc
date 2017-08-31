@@ -20,7 +20,7 @@ public class OpcConnect {
 	// opcServer 地址
 	private static String ipAddress = "127.0.0.1";
 //	private static String ipAddress = "172.1.14.82";//本机局域网地址 127.0.0.1
-	//private static String ipAddress = "192.168.0.10";//现场的内网
+	//private static String ipAddress = "192.168.0.10";//四川现场的内网
 //	private static String ipAddress = "172.16.14.99";//北京公司的局域网的opc放到d盘
 	// opcServer 名称
 	private static String opcName = "AIM.OPC.1";

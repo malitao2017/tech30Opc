@@ -10,11 +10,11 @@ https://github.com/malitao2017/tech30Opc
 jar运行： outbin\run.bat 双击
 一个可运行的现场测试项目:把变量ipAddress改为现场地址；run.bat中的JAVA_HOME定义为现场的jdk或jre
 <!-- 工程目录结构  
-    liverun  
-        |-lib  
-        |-out  
+    liverun
+        |-lib
+        |-out
         |-outbin  
-    -->  
+    -->
 
 运行main： package opctest.OpcConnect 是测试程序
 
